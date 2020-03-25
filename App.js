@@ -1,11 +1,11 @@
 // import React from 'react';
 
-// import ApiContainer from './App/Screens/ApiContainer';
+// import App from './App/components/App';
 
 // const App = () => {
 //   return (
 //     <>
-//       <ApiContainer />
+//       <App />
 //     </>
 //   );
 // };
@@ -14,9 +14,9 @@
 // export default App;
 
 import React from 'react';
-import Button from '../App/containers/Button';
-import NewsItem from '../App/containers/NewsItem'
-import Loading from '../App/containers/Loading'
+import Button from './App/containers/Button';
+import NewsItem from './App/containers/NewsItem'
+import Loading from './App/containers/Loading'
 
 
 let App = () => (
