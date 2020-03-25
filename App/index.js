@@ -7,6 +7,7 @@ import { logger } from 'redux-logger';
 import reducer from './reducers';
 import App from './components/App';
 import rootSaga from './sagas';
+import Button from './containers/Button';
 
 
 
@@ -18,6 +19,15 @@ const store = createStore(
 );
 
 sagaMiddleware.run(rootSaga);
+
+const ConnectedRoot = connect(
+  (state) => ({
+    state: state.reducer
+  }),
+  (dispatch) => ({
+    // actions: bindActionCreators(screenActions, dispatch)
+  })
+)(Button);
 
 render(
   <Provider store={store}>

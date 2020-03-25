@@ -20,11 +20,12 @@ class Button extends React.Component {
   }
   render() {
     return (
-      <button style={!this.state.hover ? styles : { ...styles, backgroundColor: 'DarkTurquoise ' }}
+      <Button style={!this.state.hover ? styles : { ...styles, backgroundColor: 'DarkTurquoise ' }}
         onMouseOut={() => { this.setState({ hover: false }) }}
         onMouseOver={() => { this.setState({ hover: true }) }}
         onClick={this.props.getNews}
-      >Press to see News</button>
+        title = "Press to see News"
+      ></Button>
     );
   }
 
@@ -34,9 +35,9 @@ const mapDispatchToProps = {
   getNews: getNews,
 };
 
-Button = connect(
-  null,
-  mapDispatchToProps,
-)(Button);
+// Button = connect(
+//   null,
+//   mapDispatchToProps,
+// )(Button);
 
 export default Button;
